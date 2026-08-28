@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WAZI HIGH STEP — Step Beyond Limits</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#0b0b0b;color:#fff;line-height:1.5}
+header{position:sticky;top:0;z-index:10;background:#0b0b0bf2;border-bottom:1px solid #292929;padding:16px 6%}
+nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:22px;font-weight:800;letter-spacing:2px}.logo span{color:#d4af37}
+nav a{color:#fff;text-decoration:none;margin-left:18px}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:70px 20px;background:radial-gradient(circle at center,#3b0d0d 0,#120909 38%,#0b0b0b 70%)}
+.hero h1{font-size:clamp(42px,8vw,82px);letter-spacing:3px}.gold{color:#d4af37}
+.hero p{margin:12px auto 25px;color:#ccc;font-size:18px}
+.btn{display:inline-block;border:0;background:#d4af37;color:#080808;padding:13px 24px;border-radius:8px;font-weight:800;cursor:pointer;text-decoration:none}
+section{padding:55px 6%;max-width:1200px;margin:auto}
+.title{text-align:center;margin-bottom:28px}.title h2{font-size:32px}.title p{color:#aaa}
+.product{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;background:#121212;border:1px solid #292929;border-radius:18px;padding:22px}
+.product-img{height:390px;border-radius:14px;background:linear-gradient(135deg,#1c1c1c,#3a1010);display:grid;place-items:center;text-align:center;color:#aaa;padding:20px}
+.product-img strong{font-size:28px;color:#d4af37}
+.price{font-size:30px;color:#d4af37;font-weight:800;margin:10px 0}
+.sizes{display:flex;gap:10px;margin:18px 0;flex-wrap:wrap}
+.size{padding:10px 17px;border:1px solid #555;background:#171717;color:#fff;border-radius:7px;cursor:pointer}.size.active{border-color:#d4af37;color:#d4af37}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
+.card{background:#121212;border:1px solid #292929;padding:22px;border-radius:12px;text-align:center}.card b{display:block;margin-bottom:6px;color:#d4af37}
+.order{background:#171717;border-radius:18px;padding:28px;max-width:650px}
+input,textarea,select{width:100%;margin:7px 0 13px;padding:13px;border-radius:7px;border:1px solid #444;background:#0d0d0d;color:#fff}
+footer{text-align:center;padding:30px;color:#888;border-top:1px solid #292929}
+.note{font-size:13px;color:#999;margin-top:12px}
+@media(max-width:700px){.product{grid-template-columns:1fr}.features{grid-template-columns:1fr}nav a{margin-left:8px;font-size:14px}.product-img{height:300px}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">WAZI <span>HIGH STEP</span></div>
+<div><a href="#shop">Shop</a><a href="#order">Order</a></div>
+</nav>
+</header>
+
+<main>
+<section class="hero">
+<div>
+<p class="gold">PREMIUM FOOTWEAR</p>
+<h1>WAZI <span class="gold">HIGH STEP</span></h1>
+<p>Step Beyond Limits</p>
+<a class="btn" href="#shop">Shop Now</a>
+</div>
+</section>
+
+<section id="shop">
+<div class="title"><h2>Featured Shoe</h2><p>স্টাইল, কমফোর্ট ও প্রিমিয়াম লুক—একসাথে।</p></div>
+<div class="product">
+<div class="product-img"><div><strong>YOUR SHOE PHOTO</strong><br><br>এখানে তোমার জুতার আসল ছবি বসবে</div></div>
+<div>
+<h2>WAZI HIGH STEP — Casual Shoe</h2>
+<div class="price">৳850</div>
+<p>সাইজ নির্বাচন করুন:</p>
+<div class="sizes">
+<button class="size" onclick="pick(this)">40</button>
+<button class="size" onclick="pick(this)">41</button>
+<button class="size" onclick="pick(this)">42</button>
+<button class="size" onclick="pick(this)">43</button>
+</div>
+<button class="btn" onclick="document.querySelector('#order').scrollIntoView({behavior:'smooth'})">এখনই অর্ডার করুন</button>
+<p class="note">Payment: বিকাশ / নগদ / Cash on Delivery</p>
+</div>
+</div>
+
+<div class="features">
+<div class="card"><b>📦 COD</b>Cash on Delivery</div>
+<div class="card"><b>💳 বিকাশ / নগদ</b>সহজ পেমেন্ট</div>
+<div class="card"><b>📏 Size 40–43</b>আপনার সাইজ বেছে নিন</div>
+</div>
+</section>
+
+<section id="order">
+<div class="title"><h2>অর্ডার করুন</h2><p>তথ্য পূরণ করে অর্ডার পাঠান।</p></div>
+<div class="order">
+<label>নাম</label><input id="name" placeholder="আপনার নাম">
+<label>মোবাইল নম্বর</label><input id="phone" placeholder="01XXXXXXXXX" inputmode="tel">
+<label>সাইজ</label>
+<select id="size"><option value="">সাইজ নির্বাচন করুন</option><option>40</option><option>41</option><option>42</option><option>43</option></select>
+<label>ডেলিভারি ঠিকানা</label><textarea id="address" rows="4" placeholder="সম্পূর্ণ ঠিকানা"></textarea>
+<label>পেমেন্ট</label>
+<select id="payment"><option>Cash on Delivery</option><option>বিকাশ</option><option>নগদ</option></select>
+<button class="btn" onclick="submitOrder()">অর্ডার কনফার্ম করুন</button>
+<p id="msg" class="note"></p>
+</div>
+</section>
+</main>
+
+<footer>© 2026 WAZI HIGH STEP — Step Beyond Limits</footer>
+
+<script>
+function pick(el){
+ document.querySelectorAll('.size').forEach(x=>x.classList.remove('active'));
+ el.classList.add('active');
+ document.getElementById('size').value=el.textContent;
+}
+function submitOrder(){
+ const n=document.getElementById('name').value.trim();
+ const p=document.getElementById('phone').value.trim();
+ const s=document.getElementById('size').value;
+ const a=document.getElementById('address').value.trim();
+ const pay=document.getElementById('payment').value;
+ if(!n||!p||!s||!a){
+   document.getElementById('msg').textContent='দয়া করে সব তথ্য পূরণ করুন।';
+   return;
+ }
+ const message =
+ `WAZI HIGH STEP - নতুন অর্ডার%0A%0A`+
+ `পণ্য: Casual Shoe%0A`+
+ `দাম: ৳850%0A`+
+ `সাইজ: ${s}%0A`+
+ `নাম: ${n}%0A`+
+ `ক্রেতার মোবাইল: ${p}%0A`+
+ `ঠিকানা: ${a}%0A`+
+ `পেমেন্ট: ${pay}`;
+ const whatsappNumber='8801842134289';
+ window.open('https://wa.me/'+whatsappNumber+'?text='+message,'_blank');
+ document.getElementById('msg').textContent='অর্ডারের তথ্য WhatsApp-এ পাঠানোর জন্য নতুন পেজ খোলা হয়েছে।';
+}
+</script>
+</body>
+</html>
