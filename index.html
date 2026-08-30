@@ -88,7 +88,38 @@ footer{text-align:center;padding:30px;color:#888;border-top:1px solid #292929}
 <label>ডেলিভারি ঠিকানা</label><textarea id="address" rows="4" placeholder="সম্পূর্ণ ঠিকানা"></textarea>
 <label>পেমেন্ট</label>
 <select id="payment"><option>Cash on Delivery</option><option>বিকাশ</option><option>নগদ</option></select>
-<button class="btn" onclick="submitOrder()">অর্ডার কনফার্ম করুন</button>
+<button class="btn" onclick="function submitOrder(){
+  const n = document.getElementById('name').value.trim();
+  const p = document.getElementById('phone').value.trim();
+  const s = document.getElementById('size').value;
+  const a = document.getElementById('address').value.trim();
+  const pay = document.getElementById('payment').value;
+
+  if(!n || !p || !s || !a){
+    document.getElementById('msg').textContent =
+      'দয়া করে সব তথ্য পূরণ করুন।';
+    return;
+  }
+
+  const message =
+    'WAZI HIGH STEP - নতুন অর্ডার\n\n' +
+    'পণ্য: Casual Shoe\n' +
+    'দাম: ৳850\n' +
+    'ডেলিভারি: ৳100\n' +
+    'মোট: ৳950\n' +
+    'সাইজ: ' + s + '\n' +
+    'নাম: ' + n + '\n' +
+    'ক্রেতার মোবাইল: ' + p + '\n' +
+    'ঠিকানা: ' + a + '\n' +
+    'পেমেন্ট: ' + pay;
+
+  const whatsappNumber = '8801842134289';
+  const url =
+    'https://wa.me/' + whatsappNumber +
+    '?text=' + encodeURIComponent(message);
+
+  window.location.href = url;
+}()">অর্ডার কনফার্ম করুন</button>
 <p id="msg" class="note"></p>
 </div>
 </section>
