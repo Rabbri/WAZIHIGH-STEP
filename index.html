@@ -1,100 +1,330 @@
-  j<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>WAZI HIGH STEP — Step Beyond Limits</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#080808;color:#fff;line-height:1.6}
-header{position:sticky;top:0;z-index:100;background:rgba(8,8,8,.96);border-bottom:1px solid #292929;padding:16px 6%}
-nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-size:21px;font-weight:800;letter-spacing:2px}
-.logo span,.gold{color:#d4af37}
-nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:600}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#080808;
+  color:#fff;
+  line-height:1.6;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(8,8,8,.96);
+  border-bottom:1px solid #292929;
+  padding:16px 6%;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:21px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.logo span,
+.gold{
+  color:#d4af37;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:18px;
+}
 
 .hero{
-min-height:75vh;display:grid;place-items:center;text-align:center;
-padding:70px 20px;
-background:radial-gradient(circle at center,#481010 0,#160909 40%,#080808 75%)
+  min-height:78vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:70px 20px;
+  background:radial-gradient(circle at center,#451010 0,#150909 40%,#080808 75%);
 }
-.hero .small{color:#d4af37;font-weight:700;letter-spacing:3px;margin-bottom:12px}
-.hero h1{font-size:clamp(42px,8vw,82px);letter-spacing:3px}
-.hero p{color:#ccc;font-size:19px;margin:12px 0 28px}
+
+.hero-small{
+  color:#d4af37;
+  font-weight:700;
+  letter-spacing:3px;
+  margin-bottom:15px;
+}
+
+.hero h1{
+  font-size:clamp(42px,8vw,82px);
+  letter-spacing:3px;
+}
+
+.hero p{
+  color:#ccc;
+  font-size:20px;
+  margin:15px 0 28px;
+}
 
 .btn{
-display:inline-block;border:0;background:#d4af37;color:#080808;
-padding:13px 25px;border-radius:8px;font-weight:800;
-cursor:pointer;text-decoration:none
+  display:inline-block;
+  border:0;
+  background:#d4af37;
+  color:#080808;
+  padding:14px 27px;
+  border-radius:8px;
+  font-weight:800;
+  cursor:pointer;
+  text-decoration:none;
 }
 
-section{padding:55px 6%;max-width:1200px;margin:auto}
-.title{text-align:center;margin-bottom:30px}
-.title h2{font-size:32px;margin-bottom:6px}
-.title p{color:#aaa}
+section{
+  padding:60px 6%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:32px;
+}
+
+.title h2{
+  font-size:34px;
+}
+
+.title p{
+  color:#aaa;
+}
 
 .product{
-display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;
-background:#121212;border:1px solid #292929;border-radius:18px;padding:22px
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:35px;
+  align-items:center;
+  background:#121212;
+  border:1px solid #292929;
+  border-radius:18px;
+  padding:22px;
 }
 
-.product-img{
-height:420px;border-radius:14px;background:#111;
-display:grid;place-items:center;overflow:hidden
+.main-image{
+  height:470px;
+  background:#101010;
+  border-radius:15px;
+  overflow:hidden;
+  display:grid;
+  place-items:center;
 }
 
-.product-img img{
-width:100%;height:100%;object-fit:contain;border-radius:14px
+.main-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
 
-.product-info h2{font-size:27px;margin-bottom:10px}
-.price{font-size:32px;color:#d4af37;font-weight:800;margin:8px 0}
-.delivery{color:#ccc;margin:8px 0}
-.total{font-size:24px;color:#d4af37;font-weight:800;margin:10px 0 18px}
+.product-info h2{
+  font-size:29px;
+  margin-bottom:10px;
+}
 
-.sizes{display:flex;gap:10px;margin:18px 0;flex-wrap:wrap}
+.description{
+  color:#ccc;
+  margin:12px 0 18px;
+}
+
+.price{
+  font-size:34px;
+  color:#d4af37;
+  font-weight:800;
+}
+
+.delivery{
+  color:#ccc;
+  margin-top:5px;
+}
+
+.total{
+  font-size:25px;
+  color:#d4af37;
+  font-weight:800;
+  margin:10px 0 20px;
+}
+
+.sizes{
+  display:flex;
+  gap:10px;
+  margin:18px 0;
+  flex-wrap:wrap;
+}
+
 .size{
-padding:10px 17px;border:1px solid #555;background:#171717;
-color:#fff;border-radius:7px;cursor:pointer;font-size:16px
+  padding:10px 18px;
+  border:1px solid #555;
+  background:#171717;
+  color:#fff;
+  border-radius:7px;
+  cursor:pointer;
 }
-.size.active{border-color:#d4af37;color:#d4af37}
 
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
-.card{
-background:#121212;border:1px solid #292929;padding:22px;
-border-radius:12px;text-align:center
+.size.active{
+  border-color:#d4af37;
+  color:#d4af37;
 }
-.card b{display:block;margin-bottom:6px;color:#d4af37}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin-top:25px;
+}
+
+.card{
+  background:#121212;
+  border:1px solid #292929;
+  padding:22px 15px;
+  border-radius:12px;
+  text-align:center;
+}
+
+.card b{
+  display:block;
+  margin-bottom:7px;
+  color:#d4af37;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.gallery-item{
+  background:#111;
+  border:1px solid #292929;
+  border-radius:15px;
+  overflow:hidden;
+}
+
+.gallery-item img{
+  width:100%;
+  display:block;
+}
+
+.caption{
+  text-align:center;
+  padding:15px;
+}
+
+.caption b{
+  color:#d4af37;
+}
 
 .order{
-background:#171717;border-radius:18px;padding:28px;
-max-width:650px;margin:auto
+  background:#171717;
+  border:1px solid #292929;
+  border-radius:18px;
+  padding:30px;
+  max-width:650px;
+  margin:auto;
 }
 
-label{display:block;margin-top:8px;font-weight:600}
-
-input,textarea,select{
-width:100%;margin:7px 0 13px;padding:13px;border-radius:7px;
-border:1px solid #444;background:#0d0d0d;color:#fff;font-size:15px
+label{
+  display:block;
+  margin-top:8px;
+  font-weight:600;
 }
 
-textarea{resize:vertical}
-.order .btn{width:100%;margin-top:8px}
+input,
+textarea,
+select{
+  width:100%;
+  margin:7px 0 13px;
+  padding:14px;
+  border-radius:7px;
+  border:1px solid #444;
+  background:#0d0d0d;
+  color:#fff;
+  font-size:15px;
+}
 
-.note{font-size:13px;color:#999;margin-top:12px}
+textarea{
+  resize:vertical;
+}
+
+.order .btn{
+  width:100%;
+  margin-top:10px;
+}
+
+.summary{
+  background:#0e0e0e;
+  border:1px solid #333;
+  border-radius:10px;
+  padding:16px;
+  margin:15px 0;
+}
+
+.summary strong{
+  color:#d4af37;
+}
+
+.note{
+  font-size:13px;
+  color:#999;
+  margin-top:12px;
+}
 
 footer{
-text-align:center;padding:30px;color:#888;
-border-top:1px solid #292929;margin-top:30px
+  text-align:center;
+  padding:35px 20px;
+  color:#888;
+  border-top:1px solid #292929;
 }
 
-@media(max-width:700px){
-.product{grid-template-columns:1fr}
-.features{grid-template-columns:1fr}
-.product-img{height:320px}
-nav a{margin-left:8px;font-size:14px}
-.hero h1{font-size:45px}
+.footer-brand{
+  color:#d4af37;
+  font-weight:800;
+  font-size:18px;
+}
+
+@media(max-width:800px){
+  .product{
+    grid-template-columns:1fr;
+  }
+
+  .features{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .main-image{
+    height:350px;
+  }
+}
+
+@media(max-width:500px){
+  .features,
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  nav a{
+    margin-left:8px;
+    font-size:14px;
+  }
 }
 </style>
 </head>
@@ -103,24 +333,43 @@ nav a{margin-left:8px;font-size:14px}
 
 <header>
 <nav>
-<div class="logo">WAZI <span>HIGH STEP</span></div>
+<div class="logo">
+WAZI <span>HIGH STEP</span>
+</div>
+
 <div>
 <a href="#shop">Shop</a>
+<a href="#gallery">Gallery</a>
 <a href="#order">Order</a>
 </div>
 </nav>
 </header>
 
+
 <main>
 
 <section class="hero">
 <div>
-<div class="small">PREMIUM FOOTWEAR</div>
-<h1>WAZI <span class="gold">HIGH STEP</span></h1>
-<p>Step Beyond Limits</p>
-<a class="btn" href="#shop">Shop Now</a>
+
+<div class="hero-small">
+PREMIUM FOOTWEAR
+</div>
+
+<h1>
+WAZI <span class="gold">HIGH STEP</span>
+</h1>
+
+<p>
+Step Beyond Limits
+</p>
+
+<a class="btn" href="#shop">
+SHOP NOW
+</a>
+
 </div>
 </section>
+
 
 <section id="shop">
 
@@ -129,101 +378,217 @@ nav a{margin-left:8px;font-size:14px}
 <p>স্টাইল, কমফোর্ট ও প্রিমিয়াম লুক—একসাথে।</p>
 </div>
 
+
 <div class="product">
 
-<div class="product-img"><div class="product-img">
-  <img src="file_00000000a300820bbca097a8ad3baf52.png"
-       alt="WAZI HIGH STEP Premium Casual Shoe">
+<div class="main-image">
+<img
+src="file_00000000a300820bbca097a8ad3baf52.png"
+alt="WAZI HIGH STEP Premium Casual Shoe">
 </div>
-  
-</div>
+
 
 <div class="product-info">
 
-<h2>WAZI HIGH STEP — Casual Shoe</h2>
+<h2>
+WAZI HIGH STEP — Premium Casual Shoe
+</h2>
 
-<div class="price">৳850</div>
-
-<p class="delivery">
-🚚 ডেলিভারি চার্জ: ৳100 — সারা বাংলাদেশ
+<p class="description">
+প্রতিদিনের ব্যবহারের জন্য স্টাইলিশ, আরামদায়ক ও প্রিমিয়াম লুকের জুতা।
 </p>
 
-<div class="total">
-মোট: ৳950
+<div class="price">
+৳750
 </div>
 
-<p>সাইজ নির্বাচন করুন:</p>
+<div class="delivery">
+🚚 ডেলিভারি চার্জ: ৳100 — সারা বাংলাদেশ
+</div>
+
+<div class="total">
+সর্বমোট: ৳850
+</div>
+
+<p>
+<strong>সাইজ নির্বাচন করুন:</strong>
+</p>
 
 <div class="sizes">
+
 <button class="size" onclick="pick(this)">40</button>
 <button class="size" onclick="pick(this)">41</button>
 <button class="size" onclick="pick(this)">42</button>
 <button class="size" onclick="pick(this)">43</button>
+
 </div>
 
-<a class="btn" href="#order">এখনই অর্ডার করুন</a>
+<a class="btn" href="#order">
+এখনই অর্ডার করুন
+</a>
 
 <p class="note">
-Payment: বিকাশ / নগদ / Cash on Delivery
+বিকাশ / নগদ / Cash on Delivery
 </p>
 
 </div>
 </div>
 
+
 <div class="features">
 
 <div class="card">
-<b>📦 COD</b>
-Cash on Delivery
+<b>🪶 LIGHTWEIGHT</b>
+হালকা ও আরামদায়ক
 </div>
 
 <div class="card">
-<b>💳 বিকাশ / নগদ</b>
-সহজ পেমেন্ট
+<b>👣 SOFT COMFORT</b>
+সারাদিনের আরাম
 </div>
 
 <div class="card">
-<b>📏 Size 40–43</b>
-আপনার সাইজ বেছে নিন
+<b>🛡️ DURABLE</b>
+টেকসই নির্মাণ
+</div>
+
+<div class="card">
+<b>👟 EASY STYLE</b>
+প্রতিদিনের স্টাইল
 </div>
 
 </div>
 
 </section>
 
+
+<section id="gallery">
+
+<div class="title">
+<h2>WAZI HIGH STEP Collection</h2>
+<p>Step in confidence. Comfort that defines you.</p>
+</div>
+
+
+<div class="gallery">
+
+<div class="gallery-item">
+
+<img
+src="file_000000009ddc820b8cfdbaec478ef9fe.png"
+alt="WAZI HIGH STEP Premium Shoe">
+    
+<div class="caption">
+<b>COMFORT THAT DEFINES YOU</b>
+<p>Walk with confidence.</p>
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="IMG20260426114219.jpg"
+alt="WAZI HIGH STEP Premium Shoe">
+    
+<div class="caption">
+<b>STEP IN CONFIDENCE</b>
+<p>Style that speaks.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
 <section id="order">
 
 <div class="title">
 <h2>অর্ডার করুন</h2>
-<p>তথ্য পূরণ করে অর্ডার পাঠান।</p>
+<p>তথ্য পূরণ করে WhatsApp-এ অর্ডার পাঠান।</p>
 </div>
+
 
 <div class="order">
 
 <label>নাম</label>
-<input id="name" type="text" placeholder="আপনার নাম">
+
+<input
+id="name"
+type="text"
+placeholder="আপনার নাম">
+
 
 <label>মোবাইল নম্বর</label>
-<input id="phone" type="tel" placeholder="01828388665" inputmode="tel">
+
+<input
+id="phone"
+type="tel"
+placeholder="01XXXXXXXXX"
+inputmode="tel">
+
 
 <label>সাইজ</label>
+
 <select id="size">
+
 <option value="">সাইজ নির্বাচন করুন</option>
 <option value="40">40</option>
 <option value="41">41</option>
 <option value="42">42</option>
 <option value="43">43</option>
+
 </select>
+
 
 <label>ডেলিভারি ঠিকানা</label>
-<textarea id="address" rows="4" placeholder="সম্পূর্ণ ঠিকানা"></textarea>
+
+<textarea
+id="address"
+rows="4"
+placeholder="সম্পূর্ণ ঠিকানা"></textarea>
+
 
 <label>পেমেন্ট</label>
+
 <select id="payment">
-<option value="Cash on Delivery">Cash on Delivery</option>
-<option value="বিকাশ">বিকাশ</option>
-<option value="নগদ">নগদ</option>
+
+<option value="Cash on Delivery">
+Cash on Delivery
+</option>
+
+<option value="বিকাশ">
+বিকাশ
+</option>
+
+<option value="নগদ">
+নগদ
+</option>
+
 </select>
+
+
+<div class="summary">
+
+<strong>অর্ডারের হিসাব</strong>
+
+<br><br>
+
+জুতার দাম: ৳750
+
+<br>
+
+ডেলিভারি চার্জ: ৳100
+
+<br>
+
+<strong>সর্বমোট: ৳850</strong>
+
+</div>
+
 
 <button class="btn" onclick="submitOrder()">
 অর্ডার কনফার্ম করুন
@@ -232,13 +597,26 @@ Cash on Delivery
 <p id="msg" class="note"></p>
 
 </div>
+
 </section>
 
 </main>
 
+
 <footer>
-© 2026 WAZI HIGH STEP — Step Beyond Limits
+
+<div class="footer-brand">
+WAZI HIGH STEP
+</div>
+
+Step Beyond Limits
+
+<br><br>
+
+© 2026 WAZI HIGH STEP — All Rights Reserved.
+
 </footer>
+
 
 <script>
 
@@ -254,6 +632,7 @@ document.getElementById('size').value =
 el.textContent.trim();
 
 }
+
 
 function submitOrder(){
 
@@ -272,36 +651,52 @@ document.getElementById('address').value.trim();
 const payment =
 document.getElementById('payment').value;
 
+
 if(!name || !phone || !size || !address){
 
 document.getElementById('msg').textContent =
-'দয়া করে সব তথ্য পূরণ করুন।';
+'দয়া করে নাম, মোবাইল, সাইজ ও ঠিকানা পূরণ করুন।';
 
 return;
 
 }
 
+
 const message =
+
 'WAZI HIGH STEP - নতুন অর্ডার\n\n' +
-'পণ্য: Casual Shoe\n' +
-'দাম: ৳850\n' +
-'ডেলিভারি: ৳100\n' +
-'মোট: ৳950\n' +
+
+'পণ্য: WAZI HIGH STEP Premium Casual Shoe\n' +
+
+'জুতার দাম: ৳750\n' +
+
+'ডেলিভারি চার্জ: ৳100\n' +
+
+'সর্বমোট: ৳850\n' +
+
 'সাইজ: ' + size + '\n' +
+
 'নাম: ' + name + '\n' +
+
 'ক্রেতার মোবাইল: ' + phone + '\n' +
+
 'ঠিকানা: ' + address + '\n' +
+
 'পেমেন্ট: ' + payment;
 
-const whatsappNumber = '88001905153365';
 
-const whatsappURL =
+const whatsappNumber =
+'8801905153365';
+
+
+const url =
 'https://wa.me/' +
 whatsappNumber +
 '?text=' +
 encodeURIComponent(message);
 
-window.location.href = whatsappURL;
+
+window.location.href = url;
 
 }
 
